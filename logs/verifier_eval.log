@@ -1,5 +1,0 @@
-Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 8821.01it/s]
-Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 8941.78it/s]
-hard_negatives_1to2 {'n': 900, 'n_questions': 300, 'positive_prevalence': 0.333, 'roc_auc': 0.7856, 'roc_auc_ci95': [0.7564, 0.8153], 'pr_auc': 0.5845, 'pr_auc_ci95': [0.5378, 0.6376], 'no_skill_pr_auc': 0.333}
-random_negatives_1to1 {'n': 600, 'n_questions': 300, 'positive_prevalence': 0.5, 'roc_auc': 0.9921, 'roc_auc_ci95': [0.9863, 0.9964], 'pr_auc': 0.9933, 'pr_auc_ci95': [0.9888, 0.9967], 'no_skill_pr_auc': 0.5}
-query-level: {'n': 300, 'top1_agreement_with_oracle_pct': 25.0, 'mean_rouge1_regret_pct': 1.19, 'oracle_rouge1': 26.26, 'first_beam_rouge1': 24.96, 'verifier_pick_rouge1': 25.07}

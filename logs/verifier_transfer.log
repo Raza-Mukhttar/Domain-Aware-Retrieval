@@ -1,31 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 10217.79it/s]
-[medqa] scored 2000 option pairs with the transferred (MedQA-trained) verifier
-Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 9479.89it/s]
-[medqa] scored 2000 option pairs with the own benchmark verifier
-Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 9727.01it/s]
-[medmcqa] scored 2000 option pairs with the transferred (MedQA-trained) verifier
-Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 9372.95it/s]
-[medmcqa] scored 2000 option pairs with the own benchmark verifier
-Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 8937.58it/s]
-[mmlu_med] scored 2000 option pairs with the transferred (MedQA-trained) verifier
-Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 10479.21it/s]
-[mmlu_med] scored 2000 option pairs with the own benchmark verifier
-Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 10521.42it/s]
-[pubmedqa] scored 600 option pairs with the transferred (MedQA-trained) verifier
-Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 10039.53it/s]
-[pubmedqa] scored 600 option pairs with the own benchmark verifier
-
-cell                          n  no verif. transf@.35    own@.35   own best
-llama31::medqa              500       46.8       42.4       45.0       47.4
-qwen3::medqa                500       64.4       62.8       60.2       64.4
-deepseek::medqa             500       24.8       24.4       26.6       27.2
-llama31::medmcqa            500       47.4       47.0       47.6       47.8
-qwen3::medmcqa              500       57.6       56.8       57.4       58.2
-deepseek::medmcqa           500       32.0       32.8       31.2       32.0
-llama31::mmlu_med           500       62.0       56.0       57.4       62.0
-qwen3::mmlu_med             500       78.6       70.6       75.2       78.6
-deepseek::mmlu_med          500       38.8       39.2       36.6       39.6
-llama31::pubmedqa           200       71.5       69.5       72.5       78.0
-qwen3::pubmedqa             200       78.5       79.5       80.5       82.0
-deepseek::pubmedqa          200       56.0       57.0       54.5       56.5
