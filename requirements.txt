@@ -1,0 +1,57 @@
+# Environment for the experiments in this repository.
+# Python 3.10. These are the versions the reported numbers were produced with;
+# transformers 5.x in particular changes tokenizer resolution, so pinning matters.
+#
+#   python -m venv .venv && . .venv/bin/activate
+#   pip install -r requirements.txt
+#
+# CUDA: torch 2.7.1 was installed from the cu126 wheel index. On a different CUDA
+# version install torch first from the matching index, then this file.
+
+# --- core model stack -------------------------------------------------------
+torch==2.7.1
+transformers==5.17.0
+tokenizers==0.23.2
+safetensors==0.8.0
+accelerate==1.8.1
+huggingface_hub==1.32.0
+datasets==3.6.0
+deepspeed==0.17.1
+
+# --- retrieval --------------------------------------------------------------
+sentence-transformers==6.1.0
+faiss-cpu==1.15.1
+
+# --- entity extraction ------------------------------------------------------
+# The BC5CDR model is not on PyPI and is installed from its release URL:
+#   pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_ner_bc5cdr_md-0.5.4.tar.gz
+# Without it the pipeline falls back to phrase matching against
+# data/derived/medical_entities.json, which is slower to no effect on the
+# reported numbers but is reported as the fallback in each run manifest.
+spacy==3.7.5
+scispacy==0.6.2
+
+# --- metrics ----------------------------------------------------------------
+rouge_score==0.1.2
+nltk==3.9.1
+bert-score==0.3.13
+# NLTK data needed by METEOR, downloaded once:
+#   python -c "import nltk; nltk.download('punkt'); nltk.download('punkt_tab'); nltk.download('wordnet'); nltk.download('omw-1.4')"
+
+# --- numerics and statistics ------------------------------------------------
+numpy==1.26.4
+scipy==1.15.3
+scikit-learn==1.7.0
+pandas==2.3.0
+
+# --- figures ----------------------------------------------------------------
+matplotlib==3.10.3
+
+# --- convenience ------------------------------------------------------------
+setproctitle==1.3.6
+
+# --- optional: only the retained submitted-version scripts need this ---------
+# experiments/legacy_submitted_version/ compares dense retrieval against BM25.
+# Left unpinned: those scripts ran under the earlier environment, so no version
+# here would be the one their numbers were produced with.
+rank_bm25
