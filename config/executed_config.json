@@ -1,0 +1,76 @@
+{
+  "_comment": "The configuration that produced every number in the paper. Each phase script reads its values from the command line; these are the executed defaults, listed here so a reproduction can be checked against them without reading the code.",
+
+  "seeds": {
+    "primary": 42,
+    "variability": [42, 1, 2],
+    "note": "Seed 42 carries the full grid. Seeds 1 and 2 repeat training and evaluation end to end, so the reported spread is training-seed spread, not decoding noise."
+  },
+
+  "phase_a_offline_preparation": {
+    "embedder": "sentence-transformers/all-MiniLM-L6-v2",
+    "embedder_frozen": true,
+    "index": "FAISS IndexFlatIP over L2-normalised embeddings (cosine similarity)",
+    "index_built_from": "training split only",
+    "question_type_assignment": "deterministic regular expressions over the question stem",
+    "entity_extraction": "scispaCy en_ner_bc5cdr_md when importable, otherwise phrase matching against the stored BC5CDR vocabulary",
+    "retrieval_pool_size": 2000
+  },
+
+  "phase_b_prompt_and_adaptation": {
+    "exemplars_k": 3,
+    "exemplar_field": "summary",
+    "adaptation": "full fine-tuning, all parameters",
+    "precision": "bf16",
+    "optimizer": "AdamW",
+    "learning_rate": 5e-06,
+    "lr_scheduler": "linear",
+    "warmup_ratio": 0.03,
+    "max_grad_norm": 1.0,
+    "epochs": 3,
+    "per_device_batch_size": 4,
+    "gradient_accumulation_steps": 4,
+    "effective_batch_size": 16,
+    "max_sequence_length": 768,
+    "prompt_token_cap": 512,
+    "target_token_cap": 200,
+    "n_train": 500,
+    "n_val": 200,
+    "loss": "autoregressive, prompt tokens masked to -100",
+    "truncation_side": "left",
+    "truncation_side_note": "'left' keeps the end of the prompt so the target question survives the cap. The submitted runs used 'right', which dropped it; both are reproducible via --truncation_side."
+  },
+
+  "phase_c_inference_and_selection": {
+    "n_candidates": 5,
+    "decoding": "beam search, num_beams = n_candidates, do_sample false, early_stopping true",
+    "max_new_tokens": 200,
+    "max_input_tokens": 512,
+    "entity_bonus_gamma": 1.0,
+    "entity_bonus_target_set": "entities of the question, E(q), capped at 12",
+    "selection_rules": {
+      "first": {"alpha": null, "use_verifier": false, "use_entity": false},
+      "verifier": {"alpha": 1.0, "use_verifier": true, "use_entity": false},
+      "entity": {"alpha": 0.0, "use_verifier": false, "use_entity": true},
+      "combined": {"alpha": 0.75, "use_verifier": true, "use_entity": true}
+    },
+    "closed_form_verifier_fusion_weight": 0.35,
+    "n_test_open_ended": 300,
+    "n_test_closed_form": 500,
+    "n_test_pubmedqa": 200
+  },
+
+  "evaluation": {
+    "reference": "original dataset answer, never the machine summary",
+    "metrics": ["ROUGE-1", "ROUGE-2", "ROUGE-L", "METEOR", "BERTScore F1"],
+    "rouge": "rouge_score with use_stemmer true",
+    "bertscore": "lang=en (roberta-large, layer 17), rescale_with_baseline false",
+    "bootstrap_resamples": 10000,
+    "confidence_level": 95,
+    "bootstrap": "percentile, paired on the same questions for differences",
+    "closed_form_test": "exact McNemar on identical items",
+    "multiple_comparison_correction": "Holm, over the five metrics of a family",
+    "closed_form_interval": "Wilson",
+    "interpretation_rule": "a difference counts as an effect only when its interval excludes zero and it exceeds the seed-to-seed standard deviation"
+  }
+}

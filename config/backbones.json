@@ -1,0 +1,13 @@
+{
+  "_comment": "Backbones are downloaded from the Hugging Face Hub at run time; no weights are stored in this repository. Set MEDLM_MODEL_CACHE to control where they are cached.",
+  "generators": {
+    "llama31": "NousResearch/Meta-Llama-3.1-8B-Instruct",
+    "qwen3": "Qwen/Qwen3-8B",
+    "deepseek": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
+  },
+  "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+  "verifier_base": "emilyalsentzer/Bio_ClinicalBERT",
+  "verifier_note": "The verifier is a sequence-classification head fine-tuned on question-answer pairs. Train it with scripts/pipeline/train_verifier.py, then point MEDLM_VERIFIER or --verifier at the result.",
+  "entity_model": "en_ner_bc5cdr_md (scispaCy)",
+  "bertscore_model": "roberta-large"
+}

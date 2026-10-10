@@ -1,0 +1,31 @@
+{
+  "_comment": "Open-ended corpora are stored in data/ because they are local preprocessed splits. Closed-form benchmarks are pulled from the Hub at run time and are therefore not stored here.",
+  "local": {
+    "medquad": {
+      "path": "data/medquad",
+      "splits": ["train", "validation", "test"],
+      "summaries": "data/derived/train_summaries_medquad.json"
+    },
+    "icliniq": {
+      "path": "data/icliniq",
+      "splits": ["train", "validation", "test"],
+      "summaries": "data/derived/train_summaries_icliniq.json",
+      "source": "LasseRegin/medical-question-answer-data"
+    },
+    "medquad_group_disjoint": {
+      "path": "data/medquad_group_disjoint",
+      "splits": ["train", "validation", "test"],
+      "summaries": "data/derived/train_summaries_medquad_group_disjoint.json",
+      "note": "Source/topic-disjoint repartition of MedQuAD: no (source document, focus entity) group appears in more than one partition, so the retrieval pool shares no topic or source document with the evaluated questions. Built by experiments/exp3_build_group_disjoint_split.py."
+    }
+  },
+  "hub": {
+    "medqa": "GBaker/MedQA-USMLE-4-options",
+    "mmlu_med": "cais/mmlu (medical subsets)",
+    "medmcqa": "openlifescienceai/medmcqa",
+    "pubmedqa": "qiaojin/PubMedQA"
+  },
+  "derived": {
+    "medical_entities.json": "BC5CDR chemical and disease vocabulary used when scispaCy is unavailable"
+  }
+}
