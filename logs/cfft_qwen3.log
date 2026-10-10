@@ -1,0 +1,42 @@
+model ready: ../model_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/ 07:08
+=== TRAIN qwen3 medqa 07:08 ===
+[done] outputs/runs/ckptcf_medqa_qwen3_seed42 train 10.9 min peak 41.8 GB total 11.5 min
+=== EVAL  qwen3 medqa 07:19 ===
+[labels] medqa/test: n=500 classes=4 prevalence={0: 29.0, 1: 26.2, 2: 24.2, 3: 20.6} majority=29.00%
+[labels] medqa/train: n=2000 classes=4 prevalence={0: 25.95, 1: 25.85, 2: 25.6, 3: 22.6} majority=25.95%
+[res] medqa/adapted    run=f3d0906925 acc=64.40 [60.11,68.47] macroF1=63.57 majority=29.00
+[res] medqa/adapted_verifier run=cf6f681aba acc=61.20 [56.86,65.37] macroF1=60.61 majority=29.00
+[res] medqa/adapted_rag run=5539956ed7 acc=49.60 [45.24,53.97] macroF1=48.64 majority=29.00
+[res] medqa/adapted_rag_verifier run=80eb3d2309 acc=49.80 [45.44,54.17] macroF1=49.09 majority=29.00
+[done] outputs/runs/closed_medqa_qwen3ft in 1043s
+=== TRAIN qwen3 mmlu_med 07:37 ===
+[done] outputs/runs/ckptcf_mmlu_med_qwen3_seed42 train 1.8 min peak 41.8 GB total 2.4 min
+=== EVAL  qwen3 mmlu_med 07:39 ===
+[labels] mmlu_med/test: n=500 classes=4 prevalence={0: 22.2, 1: 24.2, 2: 22.4, 3: 31.2} majority=31.20%
+[labels] mmlu_med/train: n=153 classes=4 prevalence={0: 15.69, 1: 28.76, 2: 22.88, 3: 32.68} majority=32.68%
+[res] mmlu_med/adapted    run=2c609118e3 acc=78.60 [74.79,81.97] macroF1=78.28 majority=31.20
+[res] mmlu_med/adapted_verifier run=b4f82e447c acc=72.60 [68.53,76.33] macroF1=71.96 majority=31.20
+[res] mmlu_med/adapted_rag run=5e665362ee acc=78.40 [74.58,81.78] macroF1=78.14 majority=31.20
+[res] mmlu_med/adapted_rag_verifier run=b76a556957 acc=75.00 [71.02,78.60] macroF1=74.54 majority=31.20
+[done] outputs/runs/closed_mmlu_med_qwen3ft in 620s
+=== TRAIN qwen3 medmcqa 07:50 ===
+[done] outputs/runs/ckptcf_medmcqa_qwen3_seed42 train 5.7 min peak 41.8 GB total 6.2 min
+=== EVAL  qwen3 medmcqa 07:56 ===
+[labels] medmcqa/test: n=500 classes=4 prevalence={0: 30.8, 1: 24.8, 2: 23.4, 3: 21.0} majority=30.80%
+[labels] medmcqa/train: n=2000 classes=4 prevalence={0: 29.85, 1: 26.65, 2: 23.2, 3: 20.3} majority=29.85%
+[res] medmcqa/adapted    run=67c7372cfc acc=57.60 [53.23,61.86] macroF1=57.49 majority=30.80
+[res] medmcqa/adapted_verifier run=a41e541458 acc=54.40 [50.02,58.72] macroF1=54.15 majority=30.80
+[res] medmcqa/adapted_rag run=dbd1bb951c acc=59.00 [54.64,63.23] macroF1=58.72 majority=30.80
+[res] medmcqa/adapted_rag_verifier run=fc081b2167 acc=56.00 [51.62,60.29] macroF1=55.58 majority=30.80
+[done] outputs/runs/closed_medmcqa_qwen3ft in 469s
+=== TRAIN qwen3 pubmedqa 08:04 ===
+[done] outputs/runs/ckptcf_pubmedqa_qwen3_seed42 train 15.1 min peak 41.8 GB total 15.6 min
+=== EVAL  qwen3 pubmedqa 08:20 ===
+[labels] pubmedqa/test: n=200 classes=3 prevalence={0: 56.5, 1: 34.5, 2: 9.0} majority=56.50%
+[labels] pubmedqa/train: n=800 classes=3 prevalence={0: 54.88, 1: 33.62, 2: 11.5} majority=54.87%
+[res] pubmedqa/adapted    run=4c411b6ade acc=78.50 [72.30,83.63] macroF1=61.56 majority=56.50
+[res] pubmedqa/adapted_verifier run=cf547f9e4a acc=73.00 [66.46,78.68] macroF1=60.89 majority=56.50
+[res] pubmedqa/adapted_rag run=e5f1af4509 acc=75.00 [68.57,80.49] macroF1=62.05 majority=56.50
+[res] pubmedqa/adapted_rag_verifier run=b2af7dbe7c acc=68.00 [61.25,74.07] macroF1=54.88 majority=56.50
+[done] outputs/runs/closed_pubmedqa_qwen3ft in 249s
+CF-ADAPTED qwen3 DONE 08:24

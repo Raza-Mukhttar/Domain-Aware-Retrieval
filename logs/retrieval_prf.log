@@ -1,0 +1,18 @@
+pool 2000 items, 300 evaluated questions
+fast ROUGE-1 F vs rouge_score on 50 pairs: max abs difference 0.00e+00
+relevance matrix (300, 2000); mean 0.186, max 1.000
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 11212.68it/s]
+dense: ranked top-10 for 300 questions (fallbacks 0)
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 9770.52it/s]
+question_type: ranked top-10 for 300 questions (fallbacks 0)
+
+tau    strategy       precision@3   random@3       R@1       R@3       R@5       MRR
+0.25   dense               56.11%    21.491%     0.34%     0.84%     1.43%    0.7119
+0.25   question_type       63.56%    21.491%     0.34%     0.92%     1.46%    0.7652
+0.25                  relevant per question: 429.83; questions with none: 2
+0.35   dense               30.00%     3.334%     2.29%     4.80%     7.72%    0.4443
+0.35   question_type       34.22%     3.334%     2.47%     4.98%     7.33%    0.4893
+0.35                  relevant per question: 66.68; questions with none: 40
+0.45   dense               17.00%     1.948%     5.75%    10.75%    14.18%    0.2407
+0.45   question_type       20.89%     1.948%     4.79%    11.21%    13.69%    0.2871
+0.45                  relevant per question: 38.97; questions with none: 144

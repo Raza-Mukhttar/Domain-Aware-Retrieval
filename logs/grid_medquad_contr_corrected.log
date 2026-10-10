@@ -1,0 +1,87 @@
+[data] medquad: train pool 2000, test 300
+[entities] vocabulary 2269 entries; scispaCy in use
+[model] loading generator ../experiments/ckpt_medquad_llama31c_seed42
+
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/291 [00:00<00:32,  9.03it/s]
+Loading weights:   1%|          | 2/291 [00:00<00:37,  7.70it/s]
+Loading weights:   5%|▌         | 15/291 [00:00<00:05, 50.11it/s]
+Loading weights:   8%|▊         | 24/291 [00:00<00:04, 62.93it/s]
+Loading weights:  11%|█▏        | 33/291 [00:00<00:03, 68.46it/s]
+Loading weights:  14%|█▍        | 42/291 [00:00<00:03, 71.72it/s]
+Loading weights:  18%|█▊        | 51/291 [00:00<00:03, 73.88it/s]
+Loading weights:  21%|██        | 60/291 [00:00<00:03, 75.09it/s]
+Loading weights:  24%|██▎       | 69/291 [00:01<00:02, 75.71it/s]
+Loading weights:  27%|██▋       | 78/291 [00:01<00:02, 76.27it/s]
+Loading weights:  30%|██▉       | 87/291 [00:01<00:02, 76.44it/s]
+Loading weights:  33%|███▎      | 96/291 [00:01<00:02, 76.84it/s]
+Loading weights:  36%|███▌      | 105/291 [00:01<00:02, 77.31it/s]
+Loading weights:  39%|███▉      | 114/291 [00:01<00:02, 77.64it/s]
+Loading weights:  42%|████▏     | 123/291 [00:01<00:02, 77.57it/s]
+Loading weights:  45%|████▌     | 132/291 [00:01<00:02, 77.63it/s]
+Loading weights:  48%|████▊     | 141/291 [00:01<00:01, 78.03it/s]
+Loading weights:  52%|█████▏    | 150/291 [00:02<00:01, 77.96it/s]
+Loading weights:  55%|█████▍    | 159/291 [00:02<00:01, 77.79it/s]
+Loading weights:  58%|█████▊    | 168/291 [00:02<00:01, 77.89it/s]
+Loading weights:  61%|██████    | 177/291 [00:02<00:01, 77.88it/s]
+Loading weights:  64%|██████▍   | 186/291 [00:02<00:01, 78.15it/s]
+Loading weights:  67%|██████▋   | 195/291 [00:02<00:01, 78.01it/s]
+Loading weights:  70%|███████   | 204/291 [00:02<00:01, 78.12it/s]
+Loading weights:  73%|███████▎  | 213/291 [00:02<00:00, 78.25it/s]
+Loading weights:  76%|███████▋  | 222/291 [00:03<00:00, 78.21it/s]
+Loading weights:  79%|███████▉  | 231/291 [00:03<00:00, 77.98it/s]
+Loading weights:  82%|████████▏ | 240/291 [00:03<00:00, 78.02it/s]
+Loading weights:  86%|████████▌ | 249/291 [00:03<00:00, 78.04it/s]
+Loading weights:  89%|████████▊ | 258/291 [00:03<00:00, 78.19it/s]
+Loading weights:  92%|█████████▏| 267/291 [00:03<00:00, 75.56it/s]
+Loading weights:  95%|█████████▍| 276/291 [00:03<00:00, 76.10it/s]
+Loading weights:  98%|█████████▊| 285/291 [00:03<00:00, 76.56it/s]
+Loading weights: 100%|██████████| 291/291 [00:03<00:00, 75.23it/s]
+[model] loaded in 6s on cuda:0
+
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 104/104 [00:00<00:00, 8875.03it/s]
+site-packages/spacy/language.py:2195: FutureWarning: Possible set union at position 6328
+  deserializers["tokenizer"] = lambda p: self.tokenizer.from_disk(  # type: ignore[union-attr]
+[gen] norag_n5: 300 prompts, N=5, gamma=0.0
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+[gen] norag_n5 done in 402s (1.34s/item)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights:   0%|          | 0/389 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 389/389 [00:00<00:00, 4967.47it/s]
+[transformers] [1mRobertaModel LOAD REPORT[0m from: roberta-large
+Key                       | Status     | 
+--------------------------+------------+-
+lm_head.bias              | UNEXPECTED | 
+lm_head.layer_norm.weight | UNEXPECTED | 
+lm_head.layer_norm.bias   | UNEXPECTED | 
+lm_head.dense.bias        | UNEXPECTED | 
+lm_head.dense.weight      | UNEXPECTED | 
+pooler.dense.weight       | MISSING    | 
+pooler.dense.bias         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+[res] norag_n5_first               run=2945175408  R1=34.05 MET=26.25 BS=84.98
+[res] norag_n5_verifier            run=c127ee3ad4  R1=34.09 MET=26.18 BS=84.98
+[res] norag_n5_entity              run=5519332980  R1=34.05 MET=26.25 BS=84.98
+[res] norag_n5_combined            run=cdf0de75c7  R1=34.10 MET=26.20 BS=84.98
+[gen] norag_n1: 300 prompts, N=1, gamma=0.0
+[gen] norag_n1 done in 233s (0.78s/item)
+[res] norag_n1_first               run=93dc21bda2  R1=32.41 MET=25.38 BS=84.50
+
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 103/103 [00:00<00:00, 10228.80it/s]
+[gen] rag_n5: 300 prompts, N=5, gamma=0.0
+[gen] rag_n5 done in 646s (2.15s/item)
+[res] rag_n5_first                 run=8b9183430d  R1=36.65 MET=28.85 BS=85.87
+[res] rag_n5_verifier              run=83f106a7cf  R1=36.75 MET=29.03 BS=85.88
+[res] rag_n5_entity                run=19c0b9e552  R1=36.56 MET=28.74 BS=85.86
+[res] rag_n5_combined              run=99dcc0428d  R1=36.73 MET=29.02 BS=85.88
+[gen] rag_n1: 300 prompts, N=1, gamma=0.0
+[gen] rag_n1 done in 256s (0.85s/item)
+[res] rag_n1_first                 run=410027b86b  R1=35.84 MET=28.36 BS=85.84
+[done] outputs/runs/openended_medquad_llama31cT42 in 1739s

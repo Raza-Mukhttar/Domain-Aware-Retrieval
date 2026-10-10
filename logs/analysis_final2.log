@@ -1,0 +1,19 @@
+site-packages/spacy/language.py:2195: FutureWarning: Possible set union at position 6328
+  deserializers["tokenizer"] = lambda p: self.tokenizer.from_disk(  # type: ignore[union-attr]
+open-ended conditions: 140 | multi-seed: 20 | paired: 28 | closed: 96 | mcnemar: 132 | training runs: 20
+  retrieval                    dR1= -8.90 [-10.46, -7.33] p=7.2e-23
+  budget_norag                 dR1= +1.55 [0.64, 2.47] p=0.00794
+  budget_rag                   dR1= +0.76 [0.01, 1.52] p=0.0524
+  rerank                       dR1= +0.11 [-0.35, 0.56] p=1
+  verifier                     dR1= +0.10 [-0.35, 0.55] p=1
+  entity_rerank                dR1= +0.11 [-0.01, 0.28] p=0.69
+  qtype                        dR1= -0.22 [-1.27, 0.84] p=0.914
+  unsummarised                 dR1= +4.30 [2.7, 5.89] p=4.3e-07
+  entity_decoding              dR1= +0.02 [-0.38, 0.41] p=1
+  entity_decoding_plus_rerank  dR1= -0.05 [-0.49, 0.34] p=1
+  entity_decoding_norag        dR1= +0.34 [-0.24, 0.94] p=0.744
+  contrastive_rag              dR1= -0.05 [-0.48, 0.36] p=1
+  contrastive_norag            dR1= +0.08 [-0.37, 0.53] p=1
+  contrastive_rag_first        dR1= +0.15 [-0.24, 0.56] p=1
+retrieval effect by seed: {'medquad::llama31s42': {'rouge1': -8.9, 'rouge2': -5.87, 'rougeL': -5.97, 'meteor': -7.68, 'bertscore_f1': -2.59}, 'medquad::llama31s1': {'rouge1': -10.16, 'rouge2': -6.8, 'rougeL': -6.8, 'meteor': -8.37, 'bertscore_f1': -2.89}, 'medquad::llama31s2': {'rouge1': -9.79, 'rouge2': -6.18, 'rougeL': -6.17, 'meteor': -8.48, 'bertscore_f1': -2.66}, 'icliniq::llama31s42': {'rouge1': -8.4, 'rouge2': -4.33, 'rougeL': -5.45, 'meteor': -8.83, 'bertscore_f1': -2.02}, 'icliniq::llama31s1': {'rouge1': -8.79, 'rouge2': -4.53, 'rougeL': -5.54, 'meteor': -9.24, 'bertscore_f1': -2.22}, 'icliniq::llama31s2': {'rouge1': -8.25, 'rouge2': -4.47, 'rougeL': -5.43, 'meteor': -8.71, 'bertscore_f1': -1.88}}
+grouped: {'pool_size': 2000, 'test_focus_in_pool_pct': 42.4}

@@ -1,0 +1,30 @@
+model ready: ../model_cache/hub/models--deepseek-ai--DeepSeek-R1-Distill-Llama-8B/snapshots/6a6f4aa4197940add57724a7707d069478df56b1/ 16:23
+=== deepseek medqa 16:23 ===
+[labels] medqa/test: n=500 classes=4 prevalence={0: 29.0, 1: 26.2, 2: 24.2, 3: 20.6} majority=29.00%
+[labels] medqa/train: n=2000 classes=4 prevalence={0: 25.95, 1: 25.85, 2: 25.6, 3: 22.6} majority=25.95%
+[res] medqa/vanilla    run=ef8fc1849c acc=24.80 [21.22,28.77] macroF1=24.03 majority=29.00
+[res] medqa/dense_rag  run=0d5bcb1ce2 acc=26.60 [22.92,30.64] macroF1=26.46 majority=29.00
+[res] medqa/full       run=65ca073c4f acc=24.80 [21.22,28.77] macroF1=24.67 majority=29.00
+[done] outputs/runs/closed_medqa_deepseek in 872s
+=== deepseek mmlu_med 16:38 ===
+[labels] mmlu_med/test: n=500 classes=4 prevalence={0: 22.2, 1: 24.2, 2: 22.4, 3: 31.2} majority=31.20%
+[labels] mmlu_med/train: n=153 classes=4 prevalence={0: 15.69, 1: 28.76, 2: 22.88, 3: 32.68} majority=32.68%
+[res] mmlu_med/vanilla    run=a26c10bd7f acc=30.00 [26.15,34.16] macroF1=27.53 majority=31.20
+[res] mmlu_med/dense_rag  run=a892830ca9 acc=33.00 [29.02,37.24] macroF1=31.90 majority=31.20
+[res] mmlu_med/full       run=16245d827f acc=33.60 [29.60,37.85] macroF1=31.64 majority=31.20
+[done] outputs/runs/closed_mmlu_med_deepseek in 521s
+=== deepseek medmcqa 16:47 ===
+[labels] medmcqa/test: n=500 classes=4 prevalence={0: 30.8, 1: 24.8, 2: 23.4, 3: 21.0} majority=30.80%
+[labels] medmcqa/train: n=2000 classes=4 prevalence={0: 29.85, 1: 26.65, 2: 23.2, 3: 20.3} majority=29.85%
+[res] medmcqa/vanilla    run=027eae5783 acc=28.40 [24.62,32.51] macroF1=27.49 majority=30.80
+[res] medmcqa/dense_rag  run=a3408f9147 acc=31.20 [27.30,35.39] macroF1=30.81 majority=30.80
+[res] medmcqa/full       run=78d47d8a49 acc=28.20 [24.43,32.30] macroF1=28.08 majority=30.80
+[done] outputs/runs/closed_medmcqa_deepseek in 365s
+=== deepseek pubmedqa 16:53 ===
+[labels] pubmedqa/test: n=200 classes=3 prevalence={0: 56.5, 1: 34.5, 2: 9.0} majority=56.50%
+[labels] pubmedqa/train: n=800 classes=3 prevalence={0: 54.88, 1: 33.62, 2: 11.5} majority=54.87%
+[res] pubmedqa/vanilla    run=a4f27cb68d acc=40.00 [33.46,46.92] macroF1=24.49 majority=56.50
+[res] pubmedqa/dense_rag  run=d4c4495bc9 acc=47.00 [40.20,53.91] macroF1=24.61 majority=56.50
+[res] pubmedqa/full       run=2e102d02d7 acc=48.00 [41.18,54.90] macroF1=27.09 majority=56.50
+[done] outputs/runs/closed_pubmedqa_deepseek in 193s
+CLOSED-FORM deepseek DONE 16:56

@@ -1,0 +1,13 @@
+
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Fetching 12 files:   8%|▊         | 1/12 [00:00<00:03,  3.64it/s]
+Fetching 12 files:  42%|████▏     | 5/12 [00:00<00:00,  9.35it/s]
+Fetching 12 files:  58%|█████▊    | 7/12 [00:00<00:00, 11.05it/s]
+Fetching 12 files:  67%|██████▋   | 8/12 [00:19<00:00, 11.05it/s]
+Fetching 12 files:  75%|███████▌  | 9/12 [00:58<00:30, 10.25s/it]
+Fetching 12 files:  83%|████████▎ | 10/12 [01:57<00:39, 19.98s/it]
+Fetching 12 files:  92%|█████████▏| 11/12 [01:59<00:15, 15.92s/it]
+Fetching 12 files: 100%|██████████| 12/12 [02:06<00:00, 13.84s/it]
+Fetching 12 files: 100%|██████████| 12/12 [02:06<00:00, 10.56s/it]
+done NousResearch/Meta-Llama-3.1-8B-Instruct

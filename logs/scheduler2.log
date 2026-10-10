@@ -1,0 +1,15 @@
+16:56 launched contr_medquad on gpu8
+16:59 finished contr_medquad rc=1 gpu8
+16:59 launched fewshot_llama31 on gpu1
+17:13 finished fewshot_llama31 rc=0 gpu1
+17:13 launched oe_medquad_contr on gpu1
+17:43 finished oe_medquad_contr rc=0 gpu1
+18:14 launched contr_icliniq on gpu6
+18:16 launched oe_icliniq_contr on gpu7
+18:19 finished contr_icliniq rc=0 gpu6
+18:19 launched fewshot_qwen3 on gpu6
+18:34 launched fewshot_deepseek on gpu8
+18:37 finished fewshot_qwen3 rc=0 gpu6
+18:49 finished fewshot_deepseek rc=0 gpu8
+18:50 finished oe_icliniq_contr rc=0 gpu7
+18:51 SCHEDULER2 DONE

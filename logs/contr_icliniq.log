@@ -1,0 +1,56 @@
+
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 103/103 [00:00<00:00, 9867.37it/s]
+
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/291 [00:00<00:34,  8.44it/s]
+Loading weights:   1%|          | 2/291 [00:00<00:39,  7.26it/s]
+Loading weights:   5%|▍         | 14/291 [00:00<00:05, 49.36it/s]
+Loading weights:   8%|▊         | 23/291 [00:00<00:04, 62.24it/s]
+Loading weights:  11%|█         | 32/291 [00:00<00:03, 67.28it/s]
+Loading weights:  14%|█▍        | 41/291 [00:00<00:03, 70.39it/s]
+Loading weights:  17%|█▋        | 50/291 [00:00<00:03, 72.36it/s]
+Loading weights:  20%|██        | 59/291 [00:00<00:03, 73.71it/s]
+Loading weights:  23%|██▎       | 68/291 [00:01<00:02, 74.60it/s]
+Loading weights:  26%|██▋       | 77/291 [00:01<00:02, 75.00it/s]
+Loading weights:  30%|██▉       | 86/291 [00:01<00:02, 75.36it/s]
+Loading weights:  33%|███▎      | 95/291 [00:01<00:02, 76.16it/s]
+Loading weights:  36%|███▌      | 104/291 [00:01<00:02, 76.79it/s]
+Loading weights:  39%|███▉      | 113/291 [00:01<00:02, 76.59it/s]
+Loading weights:  42%|████▏     | 122/291 [00:01<00:02, 76.42it/s]
+Loading weights:  45%|████▌     | 131/291 [00:01<00:02, 76.28it/s]
+Loading weights:  48%|████▊     | 140/291 [00:02<00:01, 76.03it/s]
+Loading weights:  51%|█████     | 149/291 [00:02<00:01, 77.32it/s]
+Loading weights:  54%|█████▍    | 158/291 [00:02<00:01, 76.89it/s]
+Loading weights:  57%|█████▋    | 167/291 [00:02<00:01, 76.55it/s]
+Loading weights:  60%|██████    | 176/291 [00:02<00:01, 76.59it/s]
+Loading weights:  64%|██████▎   | 185/291 [00:02<00:01, 77.87it/s]
+Loading weights:  67%|██████▋   | 194/291 [00:02<00:01, 77.67it/s]
+Loading weights:  70%|██████▉   | 203/291 [00:02<00:01, 77.09it/s]
+Loading weights:  73%|███████▎  | 212/291 [00:02<00:01, 76.49it/s]
+Loading weights:  76%|███████▌  | 221/291 [00:03<00:00, 76.39it/s]
+Loading weights:  79%|███████▉  | 230/291 [00:03<00:00, 76.39it/s]
+Loading weights:  82%|████████▏ | 239/291 [00:03<00:00, 77.87it/s]
+Loading weights:  85%|████████▌ | 248/291 [00:03<00:00, 77.58it/s]
+Loading weights:  88%|████████▊ | 257/291 [00:03<00:00, 77.51it/s]
+Loading weights:  91%|█████████▏| 266/291 [00:03<00:00, 76.99it/s]
+Loading weights:  95%|█████████▍| 275/291 [00:03<00:00, 76.33it/s]
+Loading weights:  98%|█████████▊| 284/291 [00:03<00:00, 77.33it/s]
+Loading weights: 100%|██████████| 291/291 [00:03<00:00, 74.07it/s]
+
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 103/103 [00:00<00:00, 9027.74it/s]
+scripts/contrastive_stage.py:32: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  projection=nn.Linear(model.config.hidden_size,embedder.get_sentence_embedding_dimension(),dtype=dt).cuda()
+epoch 1 mean loss 0.8251
+epoch 2 mean loss 0.7900
+
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 291/291 [00:00<00:00, 9227.17it/s]
+[2026-09-21 18:15:02,114] [INFO] [real_accelerator.py:254:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-09-21 18:15:03,042] [INFO] [logging.py:107:log_dist] [Rank -1] [TorchCheckpointEngine] Initialized with serialization = False
+
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]
+Writing model shards: 100%|██████████| 1/1 [00:12<00:00, 12.30s/it]
+Writing model shards: 100%|██████████| 1/1 [00:12<00:00, 12.30s/it]
+done outputs/runs/ckpt_icliniq_llama31c_seed42 32s embed-delta=6.326e-08

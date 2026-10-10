@@ -1,0 +1,30 @@
+model ready: ../model_cache/hub/models--NousResearch--Meta-Llama-3.1-8B-Instruct/snapshots/d10aef7999a2b5ba950ab3974312feeedbfe0b77/ 16:23
+=== llama31 medqa 16:23 ===
+[labels] medqa/test: n=500 classes=4 prevalence={0: 29.0, 1: 26.2, 2: 24.2, 3: 20.6} majority=29.00%
+[labels] medqa/train: n=2000 classes=4 prevalence={0: 25.95, 1: 25.85, 2: 25.6, 3: 22.6} majority=25.95%
+[res] medqa/vanilla    run=3366068243 acc=63.20 [58.89,67.31] macroF1=62.86 majority=29.00
+[res] medqa/dense_rag  run=c75e0cac65 acc=50.00 [45.63,54.37] macroF1=49.43 majority=29.00
+[res] medqa/full       run=404852338e acc=44.40 [40.10,48.78] macroF1=43.89 majority=29.00
+[done] outputs/runs/closed_medqa_llama31 in 832s
+=== llama31 mmlu_med 16:37 ===
+[labels] mmlu_med/test: n=500 classes=4 prevalence={0: 22.2, 1: 24.2, 2: 22.4, 3: 31.2} majority=31.20%
+[labels] mmlu_med/train: n=153 classes=4 prevalence={0: 15.69, 1: 28.76, 2: 22.88, 3: 32.68} majority=32.68%
+[res] mmlu_med/vanilla    run=7b2bb614c2 acc=72.00 [67.91,75.76] macroF1=71.69 majority=31.20
+[res] mmlu_med/dense_rag  run=b0f51e8d7d acc=69.60 [65.43,73.47] macroF1=69.39 majority=31.20
+[res] mmlu_med/full       run=2632d14cea acc=68.80 [64.61,72.70] macroF1=68.23 majority=31.20
+[done] outputs/runs/closed_mmlu_med_llama31 in 532s
+=== llama31 medmcqa 16:46 ===
+[labels] medmcqa/test: n=500 classes=4 prevalence={0: 30.8, 1: 24.8, 2: 23.4, 3: 21.0} majority=30.80%
+[labels] medmcqa/train: n=2000 classes=4 prevalence={0: 29.85, 1: 26.65, 2: 23.2, 3: 20.3} majority=29.85%
+[res] medmcqa/vanilla    run=8d485f3af7 acc=59.80 [55.44,64.01] macroF1=59.73 majority=30.80
+[res] medmcqa/dense_rag  run=eaf95e3ac3 acc=59.20 [54.84,63.42] macroF1=58.99 majority=30.80
+[res] medmcqa/full       run=96198fa21a acc=56.00 [51.62,60.29] macroF1=55.15 majority=30.80
+[done] outputs/runs/closed_medmcqa_llama31 in 387s
+=== llama31 pubmedqa 16:53 ===
+[labels] pubmedqa/test: n=200 classes=3 prevalence={0: 56.5, 1: 34.5, 2: 9.0} majority=56.50%
+[labels] pubmedqa/train: n=800 classes=3 prevalence={0: 54.88, 1: 33.62, 2: 11.5} majority=54.87%
+[res] pubmedqa/vanilla    run=4f97f27481 acc=80.00 [73.91,84.95] macroF1=55.58 majority=56.50
+[res] pubmedqa/dense_rag  run=9b4d81eeb8 acc=77.50 [71.23,82.74] macroF1=54.29 majority=56.50
+[res] pubmedqa/full       run=fbd4429529 acc=77.00 [70.69,82.29] macroF1=53.75 majority=56.50
+[done] outputs/runs/closed_pubmedqa_llama31 in 189s
+CLOSED-FORM llama31 DONE 16:56

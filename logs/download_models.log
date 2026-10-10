@@ -1,0 +1,20 @@
+
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]
+Fetching 12 files:   8%|▊         | 1/12 [00:00<00:03,  3.44it/s]
+Fetching 12 files:  25%|██▌       | 3/12 [02:02<06:48, 45.33s/it]
+Fetching 12 files:  33%|███▎      | 4/12 [02:03<04:00, 30.09s/it]
+Fetching 12 files: 100%|██████████| 12/12 [02:03<00:00, 10.32s/it]
+done NousResearch/Meta-Llama-3.1-8B-Instruct NousResearch/Meta-Llama-3.1-8B-Instruct
+
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]
+Fetching 12 files:   8%|▊         | 1/12 [00:00<00:02,  3.93it/s]
+Fetching 12 files:  33%|███▎      | 4/12 [02:06<04:33, 34.23s/it]
+Fetching 12 files:  50%|█████     | 6/12 [02:07<01:57, 19.52s/it]
+Fetching 12 files: 100%|██████████| 12/12 [02:07<00:00, 10.64s/it]
+done Qwen/Qwen3-8B Qwen/Qwen3-8B
+
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]
+Fetching 7 files:  14%|█▍        | 1/7 [00:00<00:01,  4.13it/s]
+Fetching 7 files:  43%|████▎     | 3/7 [02:03<03:02, 45.56s/it]
+Fetching 7 files: 100%|██████████| 7/7 [02:03<00:00, 17.58s/it]
+done deepseek-ai/DeepSeek-R1-Distill-Llama-8B deepseek-ai/DeepSeek-R1-Distill-Llama-8B
